@@ -1524,11 +1524,14 @@ class FluentIcon(ft.Image):
     ):
         if name in FluentIcons:
             base_dir = os.path.dirname(__file__)
+            icon = "".join(
+                ICON_TEMPLATE.format(
+                    name=name.value, size=ICON_SIZE, style=style.value
+                ),
+            )
             icon_path = os.path.join(
                 base_dir,
-                f"../static/icons/{ICON_TEMPLATE.format(
-                    name=name.value, size=ICON_SIZE, style=style.value
-                ),}",
+                f"../static/icons/{icon}",
             )
 
             with open(icon_path, "r") as f:
