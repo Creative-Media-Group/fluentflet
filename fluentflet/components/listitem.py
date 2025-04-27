@@ -44,7 +44,7 @@ class ListItem(ft.GestureDetector):
                     ft.Container(
                         width=3,
                         height=18,
-                        bgcolor=self.theme.Colors.get_color("accent_default"),
+                        bgcolor=self.theme.colors.get_color("accent_default"),
                         border_radius=ft.border_radius.all(4),
                         animate=ft.animation.Animation(
                             duration=100, curve=ft.AnimationCurve.ELASTIC_OUT
@@ -106,7 +106,7 @@ class ListItem(ft.GestureDetector):
             if is_dark_mode
             else self.design_system.light_theme
         )
-        self.indicator.bgcolor = self.theme.Colors.get_color("accent_default")
+        self.indicator.bgcolor = self.theme.colors.get_color("accent_default")
         self.update_color()
 
     @classmethod

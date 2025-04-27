@@ -201,16 +201,16 @@ class Calendar(ft.Container):
                     month,
                     size=16,
                     color=(
-                        self.theme.Colors.get_color("text_on_accent_primary")
+                        self.theme.colors.get_color("text_on_accent_primary")
                         if is_current
-                        else self.theme.Colors.get_color("text_secondary")
+                        else self.theme.colors.get_color("text_secondary")
                     ),
                 ),
                 width=70,
                 height=70,
                 alignment=ft.alignment.center,
                 bgcolor=(
-                    self.theme.Colors.get_color("accent_default")
+                    self.theme.colors.get_color("accent_default")
                     if is_current
                     else None
                 ),
@@ -297,7 +297,7 @@ class Calendar(ft.Container):
         weekday_containers = [
             ft.Container(
                 ft.Text(
-                    day, size=12, color=self.theme.Colors.get_color("text_secondary")
+                    day, size=12, color=self.theme.colors.get_color("text_secondary")
                 ),
                 alignment=ft.alignment.center,
                 padding=5,
@@ -327,15 +327,15 @@ class Calendar(ft.Container):
                         day.lstrip("+-"),
                         size=16,
                         color=(
-                            self.theme.Colors.get_color("text_on_accent_primary")
+                            self.theme.colors.get_color("text_on_accent_primary")
                             if is_current
                             else (
-                                self.theme.Colors.get_color("accent_default")
+                                self.theme.colors.get_color("accent_default")
                                 if is_selected
                                 else (
-                                    self.theme.Colors.get_color("text_primary")
+                                    self.theme.colors.get_color("text_primary")
                                     if not (day.startswith(("-", "+")) or is_blackout)
-                                    else self.theme.Colors.get_color("text_disabled")
+                                    else self.theme.colors.get_color("text_disabled")
                                 )
                             )
                         ),
@@ -349,7 +349,7 @@ class Calendar(ft.Container):
                 if is_blackout:
                     blackout_line = ft.Container(
                         ft.Container(
-                            bgcolor=self.theme.Colors.get_color("text_disabled"),
+                            bgcolor=self.theme.colors.get_color("text_disabled"),
                             width=1,
                             height=30,
                             rotate=ft.transform.Rotate(0.785398),
@@ -368,12 +368,12 @@ class Calendar(ft.Container):
                     height=40,
                     alignment=ft.alignment.center,
                     bgcolor=(
-                        self.theme.Colors.get_color("accent_default")
+                        self.theme.colors.get_color("accent_default")
                         if is_current
                         else None
                     ),
                     border=(
-                        ft.border.all(1, self.theme.Colors.get_color("accent_default"))
+                        ft.border.all(1, self.theme.colors.get_color("accent_default"))
                         if is_selected
                         else None
                     ),
@@ -433,7 +433,7 @@ class Calendar(ft.Container):
                         content=ft.Text(
                             title,
                             size=16,
-                            color=self.theme.Colors.get_color("text_primary"),
+                            color=self.theme.colors.get_color("text_primary"),
                         ),
                         variant=ButtonVariant.HYPERLINK,
                         on_click=self.toggle_view,
@@ -445,7 +445,7 @@ class Calendar(ft.Container):
                                 content=ft.Icon(
                                     name=ft.icons.ARROW_DROP_UP,
                                     size=20,
-                                    color=self.theme.Colors.get_color("text_primary"),
+                                    color=self.theme.colors.get_color("text_primary"),
                                 ),
                                 variant=ButtonVariant.HYPERLINK,
                                 on_click=self.change_month(False),
@@ -455,7 +455,7 @@ class Calendar(ft.Container):
                                 content=ft.Icon(
                                     name=ft.icons.ARROW_DROP_DOWN,
                                     size=20,
-                                    color=self.theme.Colors.get_color("text_primary"),
+                                    color=self.theme.colors.get_color("text_primary"),
                                 ),
                                 variant=ButtonVariant.HYPERLINK,
                                 on_click=self.change_month(True),

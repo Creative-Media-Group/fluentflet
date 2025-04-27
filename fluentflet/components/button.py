@@ -58,29 +58,29 @@ class Button(ft.TextButton):
                     ),
                 },
                 "color": {
-                    ft.ControlState.DEFAULT: self.theme.Colors.get_color(
+                    ft.ControlState.DEFAULT: self.theme.colors.get_color(
                         "text_primary"
                     ),
-                    ft.ControlState.PRESSED: self.theme.Colors.get_color(
+                    ft.ControlState.PRESSED: self.theme.colors.get_color(
                         "text_secondary"
                     ),
-                    ft.ControlState.DISABLED: self.theme.Colors.get_color(
+                    ft.ControlState.DISABLED: self.theme.colors.get_color(
                         "text_disabled"
                     ),
                 },
             },
             ButtonVariant.ACCENT: {
                 "bgcolor": {
-                    ft.ControlState.DEFAULT: self.theme.Colors.get_color(
+                    ft.ControlState.DEFAULT: self.theme.colors.get_color(
                         "accent_default"
                     ),
-                    ft.ControlState.PRESSED: self.theme.Colors.get_color(
+                    ft.ControlState.PRESSED: self.theme.colors.get_color(
                         "accent_tertiary"
                     ),
-                    ft.ControlState.HOVERED: self.theme.Colors.get_color(
+                    ft.ControlState.HOVERED: self.theme.colors.get_color(
                         "accent_secondary"
                     ),
-                    ft.ControlState.DISABLED: self.theme.Colors.get_color(
+                    ft.ControlState.DISABLED: self.theme.colors.get_color(
                         "accent_disabled"
                     ),
                 },
@@ -93,13 +93,13 @@ class Button(ft.TextButton):
                     ),
                 },
                 "color": {
-                    ft.ControlState.DEFAULT: self.theme.Colors.get_color(
+                    ft.ControlState.DEFAULT: self.theme.colors.get_color(
                         "text_on_accent_primary"
                     ),
-                    ft.ControlState.PRESSED: self.theme.Colors.get_color(
+                    ft.ControlState.PRESSED: self.theme.colors.get_color(
                         "text_on_accent_secondary"
                     ),
-                    ft.ControlState.DISABLED: self.theme.Colors.get_color(
+                    ft.ControlState.DISABLED: self.theme.colors.get_color(
                         "text_on_accent_disabled"
                     ),
                 },
@@ -120,13 +120,13 @@ class Button(ft.TextButton):
                     ),
                 },
                 "color": {
-                    ft.ControlState.DEFAULT: self.theme.Colors.get_color(
+                    ft.ControlState.DEFAULT: self.theme.colors.get_color(
                         "accent_default"
                     ),
-                    ft.ControlState.PRESSED: self.theme.Colors.get_color(
+                    ft.ControlState.PRESSED: self.theme.colors.get_color(
                         "accent_tertiary"
                     ),
-                    ft.ControlState.DISABLED: self.theme.Colors.get_color(
+                    ft.ControlState.DISABLED: self.theme.colors.get_color(
                         "text_disabled"
                     ),
                 },

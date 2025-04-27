@@ -40,7 +40,7 @@ class Toggle(ft.Container):
             height=height,
             border_radius=height / 2,
             bgcolor=self.theme.fills.get_fill("control_fill_transparent"),
-            border=ft.border.all(1, self.theme.Colors.get_color("text_tertiary")),
+            border=ft.border.all(1, self.theme.colors.get_color("text_tertiary")),
             animate=ft.animation.Animation(300, "easeInOut"),
         )
 
@@ -51,7 +51,7 @@ class Toggle(ft.Container):
             height=handle_size,
             left=3 if not value else width - handle_size - 2,
             top=3,
-            bgcolor=self.theme.Colors.get_color("text_primary"),
+            bgcolor=self.theme.colors.get_color("text_primary"),
             border_radius=handle_size / 2,
             animate_position=ft.animation.Animation(
                 300, ft.AnimationCurve.EASE_OUT_EXPO
@@ -83,9 +83,9 @@ class Toggle(ft.Container):
                 self._label,
                 style=label_style,
                 color=(
-                    self.theme.Colors.get_color("text_disabled")
+                    self.theme.colors.get_color("text_disabled")
                     if disabled
-                    else self.theme.Colors.get_color("text_primary")
+                    else self.theme.colors.get_color("text_primary")
                 ),
                 size=15,
             )
@@ -139,26 +139,26 @@ class Toggle(ft.Container):
 
     def _update_colors(self):
         if self.disabled:
-            self._track.border_color = self.theme.Colors.get_color("text_disabled")
+            self._track.border_color = self.theme.colors.get_color("text_disabled")
             self._track.bgcolor = self.theme.fills.get_fill("control_fill_transparent")
-            self._handle.bgcolor = self.theme.Colors.get_color("text_disabled")
+            self._handle.bgcolor = self.theme.colors.get_color("text_disabled")
             if hasattr(self, "_label_text"):
-                self._label_text.color = self.theme.Colors.get_color("text_disabled")
+                self._label_text.color = self.theme.colors.get_color("text_disabled")
         else:
             if self.value:
-                self._track.border_color = self.theme.Colors.get_color("accent_default")
-                self._track.bgcolor = self.theme.Colors.get_color("accent_default")
-                self._handle.bgcolor = self.theme.Colors.get_color(
+                self._track.border_color = self.theme.colors.get_color("accent_default")
+                self._track.bgcolor = self.theme.colors.get_color("accent_default")
+                self._handle.bgcolor = self.theme.colors.get_color(
                     "text_on_accent_primary"
                 )
             else:
-                self._track.border_color = self.theme.Colors.get_color("text_tertiary")
+                self._track.border_color = self.theme.colors.get_color("text_tertiary")
                 self._track.bgcolor = self.theme.fills.get_fill(
                     "control_fill_transparent"
                 )
-                self._handle.bgcolor = self.theme.Colors.get_color("text_primary")
+                self._handle.bgcolor = self.theme.colors.get_color("text_primary")
             if hasattr(self, "_label_text"):
-                self._label_text.color = self.theme.Colors.get_color("text_primary")
+                self._label_text.color = self.theme.colors.get_color("text_primary")
 
     @property
     def label(self):
