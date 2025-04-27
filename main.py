@@ -98,7 +98,7 @@ class DisplayItem(ft.Container):
         ft.Container(
             content=ft.Text(
                 value="", #source_code,
-                color=ft.colors.WHITE70,
+                color=ft.Colors.WHITE70,
                 size=12,
                 selectable=True
             ),

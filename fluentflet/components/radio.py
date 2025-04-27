@@ -29,10 +29,10 @@ class Radio(ft.Container):
 
         self.styles = {
             "selected": {
-                "inner": self.theme.colors.get_color("text_on_accent_primary"),
-                "outer": self.theme.colors.get_color("accent_default"),
+                "inner": self.theme.Colors.get_color("text_on_accent_primary"),
+                "outer": self.theme.Colors.get_color("accent_default"),
                 "border_width": 2,
-                "border_color": self.theme.colors.get_color("accent_default"),
+                "border_color": self.theme.Colors.get_color("accent_default"),
             },
             "hovered": {
                 "inner": "transparent",
@@ -43,7 +43,7 @@ class Radio(ft.Container):
                 ),
             },
             "pressed": {
-                "inner": self.theme.colors.get_color("text_on_accent_primary"),
+                "inner": self.theme.Colors.get_color("text_on_accent_primary"),
                 "outer": self.theme.fills.get_fill("control_fill_tertiary"),
                 "border_width": 1,
                 "border_color": self.theme.fills.get_fill(
@@ -51,8 +51,8 @@ class Radio(ft.Container):
                 ),
             },
             "default": {
-                "inner": ft.colors.with_opacity(0.1, "#000000"),
-                "outer": ft.colors.with_opacity(0.1, "#000000"),
+                "inner": ft.Colors.with_opacity(0.1, "#000000"),
+                "outer": ft.Colors.with_opacity(0.1, "#000000"),
                 "border_width": 1,
                 "border_color": self.theme.fills.get_fill(
                     "control_fill_default", 0.0578
@@ -70,7 +70,7 @@ class Radio(ft.Container):
             label,
             size=int(self.design_system.font_sizes.body_font_size.replace("px", "")),
             font_family=self.design_system.font_families.font_family_text,
-            color=self.theme.colors.get_color(
+            color=self.theme.Colors.get_color(
                 "text_disabled" if disabled else "text_primary"
             ),
         )
@@ -110,10 +110,10 @@ class Radio(ft.Container):
         # Update styles with new theme colors
         self.styles = {
             "selected": {
-                "inner": self.theme.colors.get_color("text_on_accent_primary"),
-                "outer": self.theme.colors.get_color("accent_default"),
+                "inner": self.theme.Colors.get_color("text_on_accent_primary"),
+                "outer": self.theme.Colors.get_color("accent_default"),
                 "border_width": 2,
-                "border_color": self.theme.colors.get_color("accent_default"),
+                "border_color": self.theme.Colors.get_color("accent_default"),
             },
             "hovered": {
                 "inner": "transparent",
@@ -124,7 +124,7 @@ class Radio(ft.Container):
                 ),
             },
             "pressed": {
-                "inner": self.theme.colors.get_color("text_on_accent_primary"),
+                "inner": self.theme.Colors.get_color("text_on_accent_primary"),
                 "outer": self.theme.fills.get_fill("control_fill_tertiary"),
                 "border_width": 1,
                 "border_color": self.theme.fills.get_fill(
@@ -132,8 +132,8 @@ class Radio(ft.Container):
                 ),
             },
             "default": {
-                "inner": ft.colors.with_opacity(0.1, "#000000"),
-                "outer": ft.colors.with_opacity(0.1, "#000000"),
+                "inner": ft.Colors.with_opacity(0.1, "#000000"),
+                "outer": ft.Colors.with_opacity(0.1, "#000000"),
                 "border_width": 1,
                 "border_color": self.theme.fills.get_fill(
                     "control_fill_default", 0.0578
@@ -148,7 +148,7 @@ class Radio(ft.Container):
         }
 
         # Update label color
-        self.radio_label.color = self.theme.colors.get_color(
+        self.radio_label.color = self.theme.Colors.get_color(
             "text_disabled" if self._disabled else "text_primary"
         )
 
@@ -203,7 +203,7 @@ class Radio(ft.Container):
             style["border_width"], style["border_color"]
         )
         if self._disabled:
-            self.radio_label.color = self.theme.colors.get_color("text_disabled")
+            self.radio_label.color = self.theme.Colors.get_color("text_disabled")
 
     def _handle_tap(self, e):
         if not self._disabled:

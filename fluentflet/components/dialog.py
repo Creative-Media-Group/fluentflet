@@ -97,7 +97,7 @@ class Dialog(ft.Container):
             shadow=ft.BoxShadow(
                 spread_radius=1,
                 blur_radius=15,
-                color=ft.colors.with_opacity(0.3, "black"),
+                color=ft.Colors.with_opacity(0.3, "black"),
                 offset=ft.Offset(0, 4),
             ),
             animate=ft.animation.Animation(200, ft.AnimationCurve.EASE_IN_OUT),

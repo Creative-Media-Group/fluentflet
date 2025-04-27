@@ -51,55 +51,55 @@ class Button(ft.TextButton):
                 },
                 "side": {
                     ft.ControlState.DEFAULT: ft.BorderSide(
-                        1, ft.colors.with_opacity(0.0578, "#ffffff")
+                        1, ft.Colors.with_opacity(0.0578, "#ffffff")
                     ),
                     ft.ControlState.HOVERED: ft.BorderSide(
-                        1, ft.colors.with_opacity(0.078, "#ffffff")
+                        1, ft.Colors.with_opacity(0.078, "#ffffff")
                     ),
                 },
                 "color": {
-                    ft.ControlState.DEFAULT: self.theme.colors.get_color(
+                    ft.ControlState.DEFAULT: self.theme.Colors.get_color(
                         "text_primary"
                     ),
-                    ft.ControlState.PRESSED: self.theme.colors.get_color(
+                    ft.ControlState.PRESSED: self.theme.Colors.get_color(
                         "text_secondary"
                     ),
-                    ft.ControlState.DISABLED: self.theme.colors.get_color(
+                    ft.ControlState.DISABLED: self.theme.Colors.get_color(
                         "text_disabled"
                     ),
                 },
             },
             ButtonVariant.ACCENT: {
                 "bgcolor": {
-                    ft.ControlState.DEFAULT: self.theme.colors.get_color(
+                    ft.ControlState.DEFAULT: self.theme.Colors.get_color(
                         "accent_default"
                     ),
-                    ft.ControlState.PRESSED: self.theme.colors.get_color(
+                    ft.ControlState.PRESSED: self.theme.Colors.get_color(
                         "accent_tertiary"
                     ),
-                    ft.ControlState.HOVERED: self.theme.colors.get_color(
+                    ft.ControlState.HOVERED: self.theme.Colors.get_color(
                         "accent_secondary"
                     ),
-                    ft.ControlState.DISABLED: self.theme.colors.get_color(
+                    ft.ControlState.DISABLED: self.theme.Colors.get_color(
                         "accent_disabled"
                     ),
                 },
                 "side": {
                     ft.ControlState.DEFAULT: ft.BorderSide(
-                        1, ft.colors.with_opacity(0.08, "#000000")
+                        1, ft.Colors.with_opacity(0.08, "#000000")
                     ),
                     ft.ControlState.HOVERED: ft.BorderSide(
-                        1, ft.colors.with_opacity(0.078, "#ffffff")
+                        1, ft.Colors.with_opacity(0.078, "#ffffff")
                     ),
                 },
                 "color": {
-                    ft.ControlState.DEFAULT: self.theme.colors.get_color(
+                    ft.ControlState.DEFAULT: self.theme.Colors.get_color(
                         "text_on_accent_primary"
                     ),
-                    ft.ControlState.PRESSED: self.theme.colors.get_color(
+                    ft.ControlState.PRESSED: self.theme.Colors.get_color(
                         "text_on_accent_secondary"
                     ),
-                    ft.ControlState.DISABLED: self.theme.colors.get_color(
+                    ft.ControlState.DISABLED: self.theme.Colors.get_color(
                         "text_on_accent_disabled"
                     ),
                 },
@@ -120,17 +120,17 @@ class Button(ft.TextButton):
                     ),
                 },
                 "color": {
-                    ft.ControlState.DEFAULT: self.theme.colors.get_color(
+                    ft.ControlState.DEFAULT: self.theme.Colors.get_color(
                         "accent_default"
                     ),
-                    ft.ControlState.PRESSED: self.theme.colors.get_color(
+                    ft.ControlState.PRESSED: self.theme.Colors.get_color(
                         "accent_tertiary"
                     ),
-                    ft.ControlState.DISABLED: self.theme.colors.get_color(
+                    ft.ControlState.DISABLED: self.theme.Colors.get_color(
                         "text_disabled"
                     ),
                 },
-                "side": ft.BorderSide(0, ft.colors.with_opacity(0, "#000000")),
+                "side": ft.BorderSide(0, ft.Colors.with_opacity(0, "#000000")),
             },
         }
 
@@ -160,7 +160,7 @@ class Button(ft.TextButton):
             bgcolor=style_config["bgcolor"],
             side=style_config["side"],
             color=style_config["color"] if not custom_color else custom_color,
-            overlay_color=ft.colors.TRANSPARENT,
+            overlay_color=ft.Colors.TRANSPARENT,
             padding=(
                 ft.padding.all(4)
                 if is_icon_only

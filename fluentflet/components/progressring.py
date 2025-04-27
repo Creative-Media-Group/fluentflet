@@ -7,7 +7,7 @@ class ProgressRing(ft.ProgressRing):
         self.theme = FluentDesignSystem().dark_theme
         super().__init__(
             stroke_width=kwargs.get("stroke_width", 3),
-            color=self.theme.colors.get_color("accent_default"),
+            color=self.theme.Colors.get_color("accent_default"),
             stroke_cap=ft.StrokeCap.ROUND,
             **kwargs
         )

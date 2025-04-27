@@ -307,7 +307,7 @@ class DraggableCollapsible(ft.Column):
                 content=self.list_item,
                 content_feedback=ft.Container(
                     content=ft.Text(self.title, color=ft.Colors.WHITE, size=14),
-                    bgcolor=ft.colors.SURFACE_VARIANT,
+                    bgcolor=ft.Colors.SURFACE_VARIANT,
                     padding=3,
                     border_radius=5,
                 ),
@@ -372,12 +372,12 @@ class DraggableCollapsible(ft.Column):
     def on_will_accept(self, e):
         # Don't allow dropping onto leaf nodes (items with values)
         if self.item_data.value is not None:
-            e.control.content.border = ft.border.all(2, ft.colors.ERROR)
+            e.control.content.border = ft.border.all(2, ft.Colors.ERROR)
             e.control.update()
             return
 
         e.control.content.border = ft.border.all(
-            2, ft.colors.SURFACE_VARIANT if e.data == "true" else ft.colors.ERROR
+            2, ft.Colors.SURFACE_VARIANT if e.data == "true" else ft.Colors.ERROR
         )
         e.control.update()
 

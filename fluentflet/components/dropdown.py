@@ -40,7 +40,7 @@ class Dropdown(ft.Container):
     def _setup_dropdown(self):
         """Initialize the dropdown UI components"""
         self.dropdown_icon = ft.Icon(
-            name=ft.icons.ARROW_DROP_DOWN_ROUNDED, color=ft.colors.WHITE, size=16
+            name=ft.icons.ARROW_DROP_DOWN_ROUNDED, color=ft.Colors.WHITE, size=16
         )
 
         self.dropdown_button = ft.GestureDetector(
@@ -74,7 +74,7 @@ class Dropdown(ft.Container):
         return ft.Container(
             content=ft.Text(
                 text,
-                color=ft.colors.with_opacity(1, "#ffffff"),
+                color=ft.Colors.with_opacity(1, "#ffffff"),
                 size=14,
                 no_wrap=True,
                 overflow=ft.TextOverflow.ELLIPSIS,
@@ -90,11 +90,11 @@ class Dropdown(ft.Container):
         """Handle hover states for dropdown items"""
         container = e.control
         is_hover = e.data == "true"
-        container.bgcolor = ft.colors.with_opacity(0.7, "#37393b") if is_hover else None
+        container.bgcolor = ft.Colors.with_opacity(0.7, "#37393b") if is_hover else None
         container.content.color = (
-            ft.colors.with_opacity(1, "#ffffff")
+            ft.Colors.with_opacity(1, "#ffffff")
             if is_hover
-            else ft.colors.with_opacity(1, "#ffffff")
+            else ft.Colors.with_opacity(1, "#ffffff")
         )
         container.update()
 
@@ -104,16 +104,16 @@ class Dropdown(ft.Container):
 
         return ft.Container(
             content=ft.ListView(items, spacing=2),
-            # bgcolor=ft.colors.with_opacity(0.061, "#ffffff"),
+            # bgcolor=ft.Colors.with_opacity(0.061, "#ffffff"),
             bgcolor="#2d2d2d",
-            border=ft.border.all(1, ft.colors.with_opacity(0.8, ft.colors.BLACK)),
+            border=ft.border.all(1, ft.Colors.with_opacity(0.8, ft.Colors.BLACK)),
             border_radius=8,
             padding=5,
             width=self.max_width,
             shadow=ft.BoxShadow(
                 spread_radius=-1,
                 blur_radius=3,
-                color=ft.colors.with_opacity(0.2, ft.colors.BLACK),
+                color=ft.Colors.with_opacity(0.2, ft.Colors.BLACK),
                 offset=ft.Offset(0, 2),
             ),
             animate=ft.animation.Animation(

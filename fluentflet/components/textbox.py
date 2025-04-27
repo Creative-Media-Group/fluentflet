@@ -45,7 +45,7 @@ class TextBox(ft.Container):
             self.prefix_text = ft.Text(
                 value=prefix,
                 size=text_size,
-                color=self.theme.colors.get_color("text_tertiary"),
+                color=self.theme.Colors.get_color("text_tertiary"),
                 weight=ft.FontWeight.W_400,
             )
             left_padding = (
@@ -57,7 +57,7 @@ class TextBox(ft.Container):
             self.suffix_text = ft.Text(
                 value=suffix,
                 size=text_size,
-                color=self.theme.colors.get_color("text_tertiary"),
+                color=self.theme.Colors.get_color("text_tertiary"),
                 weight=ft.FontWeight.W_400,
             )
             right_padding += (
@@ -70,14 +70,14 @@ class TextBox(ft.Container):
             height=height,
             text_size=text_size,
             password=password,
-            bgcolor=ft.colors.TRANSPARENT,
-            color=self.theme.colors.get_color("text_primary"),
-            cursor_color=self.theme.colors.get_color("text_primary"),
+            bgcolor=ft.Colors.TRANSPARENT,
+            color=self.theme.Colors.get_color("text_primary"),
+            cursor_color=self.theme.Colors.get_color("text_primary"),
             cursor_height=16,
             cursor_width=1,
             hint_text=placeholder,
             hint_style=ft.TextStyle(
-                color=self.theme.colors.get_color("text_tertiary"),
+                color=self.theme.Colors.get_color("text_tertiary"),
                 size=text_size,
                 weight=ft.FontWeight.W_400,
             ),
@@ -93,7 +93,7 @@ class TextBox(ft.Container):
         self.bottom_border = ft.Container(
             width=width,
             height=1,
-            bgcolor=self.theme.colors.get_color("text_tertiary"),
+            bgcolor=self.theme.Colors.get_color("text_tertiary"),
         )
 
         # Add password visibility toggle or actions if provided
@@ -166,12 +166,12 @@ class TextBox(ft.Container):
                     else FluentIcons.EYE_SHOW
                 ),
                 size=16,
-                color=self.theme.colors.get_color("text_primary"),
+                color=self.theme.Colors.get_color("text_primary"),
             )
         return FluentIcon(
             name=FluentIcons.SEARCH,
             size=16,
-            color=self.theme.colors.get_color("text_primary"),
+            color=self.theme.Colors.get_color("text_primary"),
         )
 
     def _handle_button_click(self, e):
@@ -184,10 +184,10 @@ class TextBox(ft.Container):
 
     def _handle_focus(self, e):
         self.bgcolor = self.theme.fills.get_fill("control_fill_input_active")
-        self.bottom_border.bgcolor = self.theme.colors.get_color("accent_default")
+        self.bottom_border.bgcolor = self.theme.Colors.get_color("accent_default")
         self.bottom_border.height = 1.5
         # Update hint text color when focused
-        self.textfield.hint_style.color = self.theme.colors.get_color("text_tertiary")
+        self.textfield.hint_style.color = self.theme.Colors.get_color("text_tertiary")
         self.textfield.hint_style.opacity = 1.0
         if not self.actions_visible:
             self.actions_row.visible = True
@@ -196,10 +196,10 @@ class TextBox(ft.Container):
 
     def _handle_blur(self, e):
         self.bgcolor = self.default_bgcolor
-        self.bottom_border.bgcolor = self.theme.colors.get_color("text_tertiary")
+        self.bottom_border.bgcolor = self.theme.Colors.get_color("text_tertiary")
         self.bottom_border.height = 1
         # Update hint text color when blurred
-        self.textfield.hint_style.color = self.theme.colors.get_color("text_secondary")
+        self.textfield.hint_style.color = self.theme.Colors.get_color("text_secondary")
         self.textfield.hint_style.opacity = 0.8
         if not self.actions_visible:
             self.actions_row.visible = False
@@ -211,7 +211,7 @@ class TextBox(ft.Container):
         button = Button(
             design_system=self.design_system,
             content=FluentIcon(
-                name=icon, size=16, color=self.theme.colors.get_color("text_primary")
+                name=icon, size=16, color=self.theme.Colors.get_color("text_primary")
             ),
             variant=ButtonVariant.HYPERLINK,
             width=28,

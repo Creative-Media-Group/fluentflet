@@ -360,12 +360,12 @@ class FluentWindow:
             "hover_color": "#c42b1c",
         }
         if colors:
-            self.colors.update(colors)
+            self.Colors.update(colors)
         if self._page.blur_effect:
-            self.colors["content_bg"] = ft.colors.with_opacity(
+            self.colors["content_bg"] = ft.Colors.with_opacity(
                 0.3, self.colors["content_bg"]
             )
-            self.colors["nav_bg"] = ft.colors.with_opacity(0.3, self.colors["nav_bg"])
+            self.colors["nav_bg"] = ft.Colors.with_opacity(0.3, self.colors["nav_bg"])
 
         self._page.bgcolor = self.colors["nav_bg"]
 
@@ -697,7 +697,7 @@ class FluentWindow:
             self.nav_rail_wrapper.shadow = ft.BoxShadow(
                 spread_radius=0,
                 blur_radius=8,
-                color=ft.colors.with_opacity(0.2, "#000000"),
+                color=ft.Colors.with_opacity(0.2, "#000000"),
                 offset=ft.Offset(2, 0),
             )
         else:

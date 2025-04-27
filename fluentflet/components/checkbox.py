@@ -67,26 +67,26 @@ class Checkbox(ft.Container):
                 ),
             },
             "checked_bgcolor": {
-                ft.ControlState.DEFAULT: self.theme.colors.get_color("accent_default"),
-                ft.ControlState.HOVERED: self.theme.colors.get_color(
+                ft.ControlState.DEFAULT: self.theme.Colors.get_color("accent_default"),
+                ft.ControlState.HOVERED: self.theme.Colors.get_color(
                     "accent_secondary"
                 ),
-                ft.ControlState.PRESSED: self.theme.colors.get_color("accent_tertiary"),
-                ft.ControlState.DISABLED: self.theme.colors.get_color(
+                ft.ControlState.PRESSED: self.theme.Colors.get_color("accent_tertiary"),
+                ft.ControlState.DISABLED: self.theme.Colors.get_color(
                     "accent_disabled"
                 ),
             },
             "check_color": {
-                ft.ControlState.DEFAULT: self.theme.colors.get_color(
+                ft.ControlState.DEFAULT: self.theme.Colors.get_color(
                     "text_on_accent_primary"
                 ),
-                ft.ControlState.HOVERED: self.theme.colors.get_color(
+                ft.ControlState.HOVERED: self.theme.Colors.get_color(
                     "text_on_accent_primary"
                 ),
-                ft.ControlState.PRESSED: self.theme.colors.get_color(
+                ft.ControlState.PRESSED: self.theme.Colors.get_color(
                     "text_on_accent_secondary"
                 ),
-                ft.ControlState.DISABLED: self.theme.colors.get_color(
+                ft.ControlState.DISABLED: self.theme.Colors.get_color(
                     "text_on_accent_disabled"
                 ),
             },
@@ -154,9 +154,9 @@ class Checkbox(ft.Container):
                     ),
                     font_family=self.design_system.font_families.font_family_text,
                     color=(
-                        self.theme.colors.get_color("text_disabled")
+                        self.theme.Colors.get_color("text_disabled")
                         if disabled
-                        else self.theme.colors.get_color("text_primary")
+                        else self.theme.Colors.get_color("text_primary")
                     ),
                 )
             )
@@ -204,26 +204,26 @@ class Checkbox(ft.Container):
                 ),
             },
             "checked_bgcolor": {
-                ft.ControlState.DEFAULT: self.theme.colors.get_color("accent_default"),
-                ft.ControlState.HOVERED: self.theme.colors.get_color(
+                ft.ControlState.DEFAULT: self.theme.Colors.get_color("accent_default"),
+                ft.ControlState.HOVERED: self.theme.Colors.get_color(
                     "accent_secondary"
                 ),
-                ft.ControlState.PRESSED: self.theme.colors.get_color("accent_tertiary"),
-                ft.ControlState.DISABLED: self.theme.colors.get_color(
+                ft.ControlState.PRESSED: self.theme.Colors.get_color("accent_tertiary"),
+                ft.ControlState.DISABLED: self.theme.Colors.get_color(
                     "accent_disabled"
                 ),
             },
             "check_color": {
-                ft.ControlState.DEFAULT: self.theme.colors.get_color(
+                ft.ControlState.DEFAULT: self.theme.Colors.get_color(
                     "text_on_accent_primary"
                 ),
-                ft.ControlState.HOVERED: self.theme.colors.get_color(
+                ft.ControlState.HOVERED: self.theme.Colors.get_color(
                     "text_on_accent_primary"
                 ),
-                ft.ControlState.PRESSED: self.theme.colors.get_color(
+                ft.ControlState.PRESSED: self.theme.Colors.get_color(
                     "text_on_accent_secondary"
                 ),
-                ft.ControlState.DISABLED: self.theme.colors.get_color(
+                ft.ControlState.DISABLED: self.theme.Colors.get_color(
                     "text_on_accent_disabled"
                 ),
             },

@@ -55,10 +55,10 @@ class Slider(ft.Container):
                     ),
                 },
                 "inner": {
-                    ft.ControlState.DEFAULT: self.theme.colors.get_color(
+                    ft.ControlState.DEFAULT: self.theme.Colors.get_color(
                         "accent_default"
                     ),
-                    ft.ControlState.DISABLED: self.theme.colors.get_color(
+                    ft.ControlState.DISABLED: self.theme.Colors.get_color(
                         "accent_disabled"
                     ),
                 },
@@ -73,10 +73,10 @@ class Slider(ft.Container):
                     ),
                 },
                 "active": {
-                    ft.ControlState.DEFAULT: self.theme.colors.get_color(
+                    ft.ControlState.DEFAULT: self.theme.Colors.get_color(
                         "accent_default"
                     ),
-                    ft.ControlState.DISABLED: self.theme.colors.get_color(
+                    ft.ControlState.DISABLED: self.theme.Colors.get_color(
                         "accent_disabled"
                     ),
                 },
