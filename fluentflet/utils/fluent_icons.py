@@ -2,6 +2,7 @@ import flet as ft
 from enum import Enum
 from pathlib import Path
 import re
+import os
 
 
 class FluentIconStyle(Enum):
@@ -1522,12 +1523,12 @@ class FluentIcon(ft.Image):
         size: int = 24,
     ):
         if name in FluentIcons:
-            icon_path = Path(__file__).parent.parent.joinpath(
-                "static",
-                "icons",
-                ICON_TEMPLATE.format(
+            base_dir = os.path.dirname(__file__)
+            icon_path = os.path.join(
+                base_dir,
+                f"../static/icons/{ICON_TEMPLATE.format(
                     name=name.value, size=ICON_SIZE, style=style.value
-                ),
+                ),}",
             )
             with open(icon_path, "r") as f:
                 svg_content = f.read()
