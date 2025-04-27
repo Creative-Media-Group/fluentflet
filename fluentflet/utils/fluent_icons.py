@@ -1530,6 +1530,7 @@ class FluentIcon(ft.Image):
                     name=name.value, size=ICON_SIZE, style=style.value
                 ),}",
             )
+
             with open(icon_path, "r") as f:
                 svg_content = f.read()
 
